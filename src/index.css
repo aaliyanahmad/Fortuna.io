@@ -1,0 +1,58 @@
+/* src/index.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #131A2A, #1E2B47, #4E586E);
+    color: #F2F5F7;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #27E6A4, #9945FF);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit-specific property for compatibility */
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    color: transparent; /* Fallback for other browsers */
+}
+
+.landing p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-top: 20px;
+    color: #B7C8E6;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #9945FF, #27E6A4);
+    color: #F2F5F7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(39, 230, 164, 0.5);
+}
+
+/* //--- */
+

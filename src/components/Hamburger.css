@@ -1,0 +1,72 @@
+/* src/components/Hamburger.css */
+.hamburger-container {
+    position: fixed;
+}
+
+/* Hamburger button styles */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Hamburger bars */
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #27E6A4; /* Match the theme color */
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animation for open state */
+.bar.open {
+    transform: rotate(45deg);
+}
+
+.bar.open:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.bar.open:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/* Menu styles */
+.menu {
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    right: 0;
+    background: #202838; /* Match the theme background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    list-style: none;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Menu item styles */
+.menu li {
+    margin: 10px 0;
+}
+
+.menu li a {
+    color: #F2F5F7; /* Light text color */
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.menu li a:hover {
+    background: rgba(39, 230, 164, 0.3); /* Hover effect */
+    border-radius: 5px;
+}
+
+/* Media query to hide the hamburger menu on larger screens
+@media (min-width: 768px) {
+    .hamburger-container {
+        display: none; /* Hide the hamburger menu on larger screens 
+    }
+} */

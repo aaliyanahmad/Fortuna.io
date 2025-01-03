@@ -1,0 +1,101 @@
+/* src/components/navbar.css */
+.menu {
+    position: fixed; /* Change from 'z' to 'fixed' to keep it in view */
+    top: 50%; /* Center vertically */
+    right: 20px; /* Position on the right side */
+    transform: translateY(-50%); /* Center the menu vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    background: #202838; /* Background color */
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu item styles */
+.menu-item {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #27E6A4; /* Background color for items */
+    border-radius: 50%; /* Circular items */
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover {
+    transform: scale(1.2); /* Scale up on hover */
+    box-shadow: 0 0 20px #27E6A4; /* Add shadow on hover */
+}
+
+/* Tooltip styles for menu items */
+.menu-item span {
+    position: absolute;
+    bottom: -20px;
+    background: #131A2A; /* Background color for tooltip */
+    color: #27E6A4; /* Text color for tooltip */
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.menu-item:hover span {
+    opacity: 1; /* Show tooltip */
+    transform: translateY(0); /* Move tooltip into view */
+}
+
+/* SVG styles */
+.menu-item svg {
+    width: 30px;
+    height: 30px;
+    fill: #131A2A; /* Color for SVG icons */
+}
+
+/* Gooey effect styles */
+.gooey-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(39, 230, 164, 0.5);
+    border-radius: 50%;
+    filter: blur(10px);
+    pointer-events: none;
+    z-index: -1;
+    animation: gooey-animation 1s ease infinite;
+}
+
+/* Gooey animation keyframes */
+@keyframes gooey-animation {
+    0%, 100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+}
+
+/* Start gooey animation on hover */
+.menu-item:hover .gooey-effect {
+    animation-play-state: running;
+}
+
+/* Media query to hide the navbar on mobile devices */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the navbar on mobile devices */
+    }
+}

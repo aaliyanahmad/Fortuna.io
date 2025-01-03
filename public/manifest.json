@@ -1,0 +1,25 @@
+{
+  "short_name": "Sol App",
+  "name": "Creating a Solana based app",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "100x100 70x70 50x50 30x30",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
