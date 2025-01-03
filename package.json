@@ -1,6 +1,7 @@
 {
   "name": "fortuna.io",
   "version": "0.1.0",
+  "homepage": "https://aaliyanahmad.github.io/Fortuna.io",
   "private": true,
   "dependencies": {
     "@solana/web3.js": "^1.95.8",
